@@ -1,6 +1,6 @@
 import NotesClient from "./Notes.client";
 import type { Metadata } from "next";
-import { fetchNotes } from "@/lib/api";
+import { fetchNotesServer } from "@/lib/api/serverApi";
 import {
   QueryClient,
   HydrationBoundary,
@@ -41,7 +41,7 @@ const NotesByCategory = async ({ params }: Props) => {
   const currentPage = 1;
   await queryClient.prefetchQuery({
     queryKey: ["notes", currentPage, limit, tag],
-    queryFn: () => fetchNotes("", 1, limit, tag),
+    queryFn: () => fetchNotesServer("", 1, limit, tag),
   });
 
   return (
