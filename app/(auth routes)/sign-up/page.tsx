@@ -16,6 +16,7 @@ export default function SignUpPage() {
   const handleSubmit = async (formData: FormData) => {
     try {
       const formValues = Object.fromEntries(formData) as AuthRequestData;
+      console.log("sending to backend:", formValues);
       const res = await register(formValues);
       console.log("res", res);
       if (res) {

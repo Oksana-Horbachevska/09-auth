@@ -12,8 +12,8 @@ interface NoteResponse {
 }
 
 export type AuthRequestData = {
-  username: string;
   email: string;
+  password: string;
 };
 
 type CheckSessionRequest = {

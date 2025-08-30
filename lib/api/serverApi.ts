@@ -16,7 +16,7 @@ export async function fetchNotesServer(
   perPage = 12,
   tag?: string
 ): Promise<NoteResponse> {
-  const cookieStore = cookies();
+  const cookieStore = await cookies();
   const options = {
     params: {
       ...(query.trim() !== "" && { search: query }),
@@ -32,7 +32,7 @@ export async function fetchNotesServer(
 }
 
 export const fetchNoteByIdServer = async (id: string) => {
-  const cookieStore = cookies();
+  const cookieStore = await cookies();
   const options = {
     headers: { Cookie: cookieStore.toString() },
   };
@@ -54,7 +54,7 @@ export const checkServerSession = async () => {
 
 export const getMeServer = async (): Promise<User | null> => {
   try {
-    const cookieStore = cookies();
+    const cookieStore = await cookies();
     const res = await nextServer.get<User>("/users/me", {
       headers: {
         Cookie: cookieStore.toString(),

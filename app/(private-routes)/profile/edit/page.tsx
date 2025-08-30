@@ -28,15 +28,13 @@ const EditProfile = () => {
       <div className={css.profileCard}>
         <h1 className={css.formTitle}>Edit Profile</h1>
 
-        {user?.avatar && (
-          <Image
-            src={user?.avatar}
-            alt="User Avatar"
-            width={120}
-            height={120}
-            className={css.avatar}
-          />
-        )}
+        <Image
+          src={"https://ac.goit.global/fullstack/react/default-avatar.jpg"}
+          alt="User Avatar"
+          width={120}
+          height={120}
+          className={css.avatar}
+        />
 
         <form action={handleSubmit} className={css.profileInfo}>
           <div className={css.usernameWrapper}>
@@ -45,7 +43,7 @@ const EditProfile = () => {
               name="username"
               type="text"
               className={css.input}
-              value={user?.username}
+              defaultValue={user?.username?.split("@")[0]}
             />
           </div>
 
