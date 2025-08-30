@@ -16,6 +16,7 @@ export async function fetchNotesServer(
   perPage = 12,
   tag?: string
 ): Promise<NoteResponse> {
+  const cookieStore = cookies();
   const options = {
     params: {
       ...(query.trim() !== "" && { search: query }),
@@ -31,6 +32,7 @@ export async function fetchNotesServer(
 }
 
 export const fetchNoteByIdServer = async (id: string) => {
+  const cookieStore = cookies();
   const options = {
     headers: { Cookie: cookieStore.toString() },
   };
