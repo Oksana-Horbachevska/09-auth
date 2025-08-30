@@ -42,7 +42,7 @@ export const fetchNoteByIdServer = async (id: string) => {
 
 export const checkServerSession = async () => {
   // Дістаємо поточні cookie
-  const cookieStore = await cookies();
+  const cookieStore = cookies();
   const res = await nextServer.get("/auth/session", {
     headers: {
       Cookie: cookieStore.toString(),
