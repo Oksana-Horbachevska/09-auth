@@ -6,10 +6,10 @@ import css from "./ProfilePage.module.css";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Profile | NoteHub",
+  title: "Profile Page | NoteHub",
   description: "View and manage your NoteHub profile and account details.",
   openGraph: {
-    title: "Profile | NoteHub",
+    title: "Profile Page | NoteHub",
     description: "View and manage your NoteHub profile and account details.",
     url: "http://localhost:3000/notes/action/create",
     images: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
         url: "https://ac.goit.global/fullstack/react/notehub-og-meta.jpg",
         width: 1200,
         height: 630,
-        alt: "Profile | NoteHub",
+        alt: "Profile Page | NoteHub",
       },
     ],
   },
