@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
 import css from "./ProfilePage.module.css";
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Profile | NoteHub",
