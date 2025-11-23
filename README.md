@@ -22,9 +22,8 @@ The platform allows users to:
 * **TanStack React Query**
 * **Formik + Yup** (form handling and validation)
 * **Axios** (HTTP requests)
-* **React Hot Toast** (notifications)
 * **React Select** (custom selects)
-* **React Icons**
+* **React-paginate** 
 * **use-debounce**
 * **modern-normalize** (CSS reset)
 
@@ -57,9 +56,8 @@ npm run dev
 ### 🔐 Authentication
 
 * Email + password login/register
-* Google OAuth login
 * Protected client routes
-* JWT authentication
+* Cookies authentication
 * Profile management
 
 ### 📝 Notes
