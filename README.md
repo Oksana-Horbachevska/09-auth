@@ -3,6 +3,7 @@
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue)
 ![Node.js v18](https://img.shields.io/badge/node-v18-green)
 ![Next.js 15](https://img.shields.io/badge/next.js-15-yellow)
+![Made with React](https://img.shields.io/badge/made%20with-React-61DAFB)
 
 **NoteHub** is a modern note-taking application built with Next.js.
 The platform allows users to:
