@@ -9,6 +9,7 @@ import { useRouter } from "next/navigation";
 import { fetchNotes } from "@/lib/api/clientApi";
 import css from "./page.module.css";
 import Link from "next/link";
+import Loader from "@/components/Loader/Loader";
 
 interface NotesClientProps {
   tag?: string;
@@ -62,7 +63,7 @@ export default function NotesClient({ tag }: NotesClientProps) {
           Create note +
         </Link>
       </header>
-      {isLoading && <p>Loading...</p>}
+      {isLoading && <Loader />}
       {isError && <p>Error loading notes</p>}
       {isSuccess && data.notes.length > 0 && <NoteList notes={data.notes} />}
       {isSuccess && data.notes.length === 0 && (

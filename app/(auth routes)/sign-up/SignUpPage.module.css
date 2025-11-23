@@ -1,5 +1,6 @@
 .mainContent {
   flex: 1;
+  justify-content: center;
 }
 
 .form {
@@ -7,6 +8,7 @@
   flex-direction: column;
   gap: 16px;
   max-width: 400px;
+  width: 100%;
   margin: 40px auto;
   padding: 24px;
   background-color: #fff;

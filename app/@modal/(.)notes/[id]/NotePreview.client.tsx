@@ -5,6 +5,7 @@ import { useParams, useRouter } from "next/navigation";
 import Modal from "@/components/Modal/Modal";
 import { fetchNoteById } from "@/lib/api/clientApi";
 import css from "@/app/@modal/(.)notes/[id]/NotePreview.module.css";
+import Loader from "@/components/Loader/Loader";
 
 const NotePreviewClient = () => {
   const { id } = useParams<{ id: string }>();
@@ -20,7 +21,7 @@ const NotePreviewClient = () => {
     refetchOnMount: false,
   });
 
-  if (isLoading) return <p>Loading, please wait...</p>;
+  if (isLoading) return <Loader />;
 
   if (error || !note) return <p>Something went wrong.</p>;
 

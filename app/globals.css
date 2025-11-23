@@ -1,3 +1,8 @@
+html,
+body {
+  height: 100%;
+}
+
 body {
   font-family: var(--font-roboto), sans-serif;
   display: flex;
@@ -5,4 +10,10 @@ body {
   min-height: 100vh;
   margin: 0;
   background-color: #f8f9fa;
+}
+
+main {
+  flex: 1; /* ← саме це вирівнює футер вниз */
+  display: flex;
+  flex-direction: column;
 }
